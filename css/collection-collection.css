@@ -1,0 +1,162 @@
+#main{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* collection-bg */
+.collection-bg{
+  position: relative;
+}
+
+.collection-bg h1{
+  font-size: var(--font-size-XL);
+  font-weight: normal;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+.collection-bg h1.white{
+  color: var(--white);
+}
+
+.collection-bg h1.black{
+  color: var(--black);
+}
+
+.collection-bg img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* collection-content */
+.collection-content__wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+.collection-content__item{
+  opacity: 0.5;
+}
+
+.collection-content__item.swiper-slide-active{
+  opacity: 1;
+}
+
+.collection-content__item.white{
+  color: var(--white);
+  font-weight: normal;
+}
+
+.collection-content__item.black{
+  color: var(--black);
+  font-weight: normal;
+}
+
+.item-number{
+  font-weight: normal;
+  font-size: var(--font-size-XL);
+}
+
+.item-title{
+  font-size: var(--font-size-L);
+  font-weight: normal;
+  margin: 10px;
+}
+
+.item-text{
+  font-size: var(--font-size-S);
+  line-height: 1.5;
+}
+
+.item-button{
+  display: inline-block;
+  font-size: var(--font-size-S);
+  margin-top: 40px;
+  transition: all .2s;
+  cursor: pointer;
+  padding: 20px 20px;
+}
+
+.item-button.white{
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.collection-content__item.swiper-slide-active .item-button.white{
+  background-color: #fff;
+  color: #000;
+}
+
+.collection-content__item.swiper-slide-active .item-button.black{
+  background-color: #000;
+  color: #fff;
+}
+
+.item-button.black{
+  border: 1px solid #000;
+  color: #000;
+}
+
+.arrow-left{
+  position: absolute;
+  top: 50%;
+  left: -95%;
+  z-index: 2;
+}
+
+.arrow-right{
+  position: absolute;
+  top: 50%;
+  right: -95%;
+  z-index: 2;
+}
+
+@media screen and (max-width:900px) {
+  .collection-content__wrap{
+    width: 100%;
+  }
+
+  .item-number{
+    font-weight: normal;
+    font-size: var(--font-size-L);
+  }
+  
+  .item-title{
+    font-size: var(--font-size-M);
+    font-weight: normal;
+    margin: 10px;
+  }
+  
+  .item-text{
+    font-size: var(--font-size-XS);
+    line-height: 1.5;
+  }
+  
+  .item-button{
+    font-size: var(--font-size-XS);
+  }
+  
+  .arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+  }
+
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 2;
+  }
+}
